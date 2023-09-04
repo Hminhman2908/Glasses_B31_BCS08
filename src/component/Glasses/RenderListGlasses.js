@@ -6,15 +6,17 @@ export default class RenderListGlasses extends Component {
   renderListGlasses = () => {
     return glassesArray.map((item, index) => {
       return (
-        <ItemGlasses
-          chooseGlasses={() => this.props.chooseGlasses(item)}
-          item={item}
-          key={`${item.id}-${index}`}
-        />
+        <div className="col-3" style={{ marginBottom: 10 }}>
+          <ItemGlasses
+            chooseGlasses={() => this.props.chooseGlasses(item)}
+            item={item}
+            key={`${item.id}-${index}`}
+          />
+        </div>
       );
     });
   };
   render() {
-    return <div>{this.renderListGlasses()}</div>;
+    return <div className="row">{this.renderListGlasses()}</div>;
   }
 }

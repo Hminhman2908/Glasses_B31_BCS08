@@ -3,9 +3,9 @@ import Glasses from "./component/Glasses/Glasses";
 
 function App() {
   return (
-    <div className="container">
+    <>
       <Glasses />
-    </div>
+    </>
   );
 }
 

@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import RenderListGlasses from "./RenderListGlasses";
-import { glassesArray } from "./DataGlasses";
+// import { glassesArray } from "./DataGlasses";
 import RenderModel from "./RenderModel";
 
 export default class Glasses extends Component {
   constructor() {
     super();
     this.state = {
-      // glassesArray: glassesArray,
       glassSelected: {},
     };
     this.chooseGlasses = this.chooseGlasses.bind(this);
@@ -21,7 +20,7 @@ export default class Glasses extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <RenderModel {...this.state.glassSelected} />
         <RenderListGlasses chooseGlasses={this.chooseGlasses} />
       </div>
